@@ -21,4 +21,5 @@ jobs:
       continue-on-error: true
       with:
         url: ${{ secrets.WEBHOOK_URL }}
+        method: 'POST'
         data: '{"token": "${{ secrets.WEBHOOK_TOKEN }}", "repoName": "${{ env.shortRepo }}"}'
